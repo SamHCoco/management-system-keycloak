@@ -9,5 +9,9 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./keycloak-themes:/opt/keycloak/themes
+      - ./keycloak-theme/management-system:/opt/keycloak/themes/management-system
+      - keycloak_data:/opt/keycloak/data
     command: start-dev
+
+volumes:
+  keycloak_data:
